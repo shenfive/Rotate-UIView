@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         })
     }
     func rotateView(targateView:UIView){
-        
+        //轉
         let angle =  counter * .pi / 180
         targateView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
         if theSegment.selectedSegmentIndex == 0 {
