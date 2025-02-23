@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         let formater = DateFormatter()
         formater.dateFormat = "HH:mm:ss"
         theLebel.text = formater.string(from: Date())
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,13 +41,12 @@ class ViewController: UIViewController {
         })
     }
     func rotateView(targateView:UIView){
+        
         let angle =  counter * .pi / 180
         targateView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
         if theSegment.selectedSegmentIndex == 0 {
             counter += Double(theSlider.value)
-        }else{
-            counter -= Double(theSlider.value)
-        }
+        }else{counter -= Double(theSlider.value)}
     }
 
     
